@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VAMTIC - Soluciones Informáticas</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#ffffff;
+    --card-bg:#ffffff;
+    --muted:#4a4a4a;
+    --shadow: 0 6px 18px rgba(16,16,16,0.08);
+    --accent-1: #071118;    /* oscuro */
+    --accent-2: #0fb9b0;    /* teal claro */
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Montserrat', sans-serif;background:var(--bg);color:#111;line-height:1.5;}
+
+  /* Header */
+  header{
+    background: url('fondo.jpg') center/cover no-repeat;
+    text-align:center;
+    padding:40px 20px;
+  }
+  header img{
+    height:60px;
+    margin-bottom:12px;
+  }
+  header h1{
+    font-size:48px;
+    font-weight:700;
+  }
+  header p{
+    font-size:16px;
+    color:#444;
+    margin-top:4px;
+  }
+
+  /* Hero text */
+  .hero{
+    text-align:center;
+    padding:40px 20px;
+  }
+  .hero h2{
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:10px;
+  }
+  .hero p{
+    font-size:16px;
+    color:#333;
+    max-width:600px;
+    margin:0 auto;
+  }
+
+  /* Services */
+  .services-wrapper{
+    font-family: 'Montserrat', sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:28px;
+  }
+  .services {width:100%;max-width:920px;text-align:center;}
+  .services-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:22px;
+    margin:20px 0 28px 0;
+    align-items:start;
+  }
+  .svc-card{
+    background:var(--card-bg);
+    border-radius:10px;
+    padding:20px;
+    box-shadow: var(--shadow);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    min-height:110px;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .svc-card:hover{transform:translateY(-6px);box-shadow:0 12px 28px rgba(16,16,16,0.12);}
+  .svc-icon{width:48px;height:48px;margin-bottom:12px;stroke:#111;fill:none;stroke-width:2;opacity:0.95;}
+  .svc-label{font-weight:600;color:var(--muted);font-size:15px;line-height:1.2;text-align:center;}
+
+  .cta-wrap{display:flex;justify-content:center;margin-top:6px;}
+  .cta-btn{
+    display:inline-block;
+    padding:13px 26px;
+    border-radius:8px;
+    background: linear-gradient(90deg,var(--accent-1) 0%, var(--accent-2) 100%);
+    color:white;font-weight:700;text-decoration:none;
+    box-shadow: 0 8px 20px rgba(11,179,176,0.12);
+    border:0;cursor:pointer;font-size:15px;
+    transition:transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+  }
+  .cta-btn:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(11,179,176,0.18);opacity:0.98;}
+
+  @media (max-width:900px){.services-grid{grid-template-columns: repeat(2, 1fr);}header h1{font-size:36px;}}
+  @media (max-width:480px){
+    .services-grid{grid-template-columns: 1fr;}
+    .svc-icon{width:44px;height:44px;}
+    header h1{font-size:28px;}
+  }
+
+  /* Footer */
+  .footer-wrap{background:#f7f7f7;padding:28px 16px;text-align:center;color:#333;border-top:1px solid #e0e0e0;}
+  .footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:28px;margin-bottom:12px;}
+  .footer-link{display:flex;align-items:center;gap:8px;color:#333;text-decoration:none;font-size:14px;font-weight:500;transition:color .2s ease;}
+  .footer-link:hover{color:#0fb9b0;}
+  .footer-icon{width:18px;height:18px;stroke:#333;fill:none;stroke-width:2;}
+  .footer-copy{font-size:12px;color:#777;}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="VAMTIC Logo" />
+  <h1>VAMTIC</h1>
+  <p>Soluciones Informáticas</p>
+</header>
+
+<section class="hero">
+  <h2>Aquí están los fallos de tu pareja! (Spoiler: es tu ordenador)</h2>
+  <p>Recupera la armonía en tu relación, empezando por tu equipo</p>
+</section>
+
+<div class="services-wrapper">
+  <section class="services">
+    <div class="services-grid">
+      <div class="svc-card"><svg class="svc-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 18h16" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 6h8" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 2v20" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 8l-4-4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="svc-label">Actualizaciones de Hardware</div></div>
+      <div class="svc-card"><svg class="svc-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 17.25L10.5 9.75" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.5 4.5l5 5L9 20l-5-5L14.5 4.5z" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.5 2.5l3 3" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="svc-label">Diagnóstico y Reparación</div></div>
+      <div class="svc-card"><svg class="svc-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="14" rx="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 20h8" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 8v4" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 10l2 2 2-2" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="svc-label">Instalación de Software</div></div>
+      <div class="svc-card"><svg class="svc-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2v4" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 18v4" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.9 4.9l2.8 2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.3 16.3l2.8 2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="4" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="svc-label">Eliminación de Virus</div></div>
+    </div>
+    <div class="cta-wrap"><a class="cta-btn" href="https://wa.me/34694423045" target="_blank">¡Repara tu computadora ahora!</a></div>
+  </section>
+</div>
+
+<footer class="footer-wrap">
+  <div class="footer-links">
+    <a class="footer-link" href="https://wa.me/34694423045" target="_blank"><svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.88 19.88 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 12.8 19.88 19.88 0 0 1 0 4.18 2 2 0 0 1 2 2h3a2 2 0 0 1 2 1.72c.12.81.34 1.6.66 2.34a2 2 0 0 1-.45 2.11L6.1 9.9a16 16 0 0 0 8 8l1.73-1.12a2 2 0 0 1 2.11-.45c.74.32 1.53.54 2.34.66a2 2 0 0 1 1.72 2z"/></svg>+34 694 423 045</a>
+    <a class="footer-link" href="mailto:soluciones.vamtic@gmail.com"><svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 4h16v16H4z" stroke="none"/><path d="M22 6.92V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6.92l10 6.25 10-6.25z"/></svg>soluciones.vamtic@gmail.com</a>
+    <a class="footer-link" href="https://instagram.com/soluciones.vamtic" target="_blank"><svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>@soluciones.vamtic</a>
+    <a class="footer-link" href="https://youtube.com/@soluciones.vamtic" target="_blank"><svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19 3.5 12 3.5 12 3.5s-7 0-9.4.6a3 3 0 0 0-2.1 2.1C0 8.6 0 12 0 12s0 3.4.5 5.8a3 3 0 0 0 2.1 2.1c2.4.6 9.4.6 9.4.6s7 0 9.4-.6a3 3 0 0 0 2.1-2.1c.6-2.4.6-5.8.6-5.8s0-3.4-.6-5.8z"/><polygon points="9.75 8.5 15.5 12 9.75 15.5 9.75 8.5"/></svg>@soluciones.vamtic</a>
+    <a class="footer-link" href="https://www.milanuncios.com/servicios-informaticos/soluciones-informaticas-552753591.htm" target="_blank"><svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>Milanuncios</a>
+    <a class="footer-link" href="https://es.wallapop.com/item/soluciones-informaticas-montaje-y-mantenimiento-1161768289" target="_blank"><svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21s-6-5.686-6-10A6 6 0 0 1 18 11c0 4.314-6 10-6 10z"/></svg>Wallapop</a>
+    <a class="footer-link" href="https://www.google.com/maps/search/?api=1&query=Burgos" target="_blank"><svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>Burgos</a>
+  </div>
+  <div class="footer-copy">© 2025 Soluciones Vamtic - Todos los derechos reservados</div>
+</footer>
+
+</body>
+</html>
