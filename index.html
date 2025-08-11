@@ -70,20 +70,20 @@
     margin:20px 0 28px 0;
     align-items:start;
   }
-  .svc-card{
-    background:var(--card-bg);
-    border-radius:10px;
-    padding:20px;
+  .svc-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 20px;
     box-shadow: var(--shadow);
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:flex-start;
-    min-height:110px;
-    transition:transform .18s ease, box-shadow .18s ease;
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Cambié flex-start a center */
+    min-height: 140px; /* Un poco más alto para que respire */
+    transition: transform .18s ease, box-shadow .18s ease;
+}
   .svc-card:hover{transform:translateY(-6px);box-shadow:0 12px 28px rgba(16,16,16,0.12);}
-  .svc-icon{width:48px;height:48px;margin-bottom:12px;stroke:#111;fill:none;stroke-width:2;opacity:0.95;}
+  .svc-icon { width: 48px; height: 48px; display: block; margin: 0 auto 12px auto; stroke: #111; fill: none; stroke-width: 2; opacity: 0.95; object-fit: contain; /* Mantiene proporción */}
   .svc-label{font-weight:600;color:var(--muted);font-size:15px;line-height:1.2;text-align:center;}
 
   .cta-wrap{display:flex;justify-content:center;margin-top:6px;}
@@ -156,3 +156,4 @@
 </body>
 
 </html>
+
